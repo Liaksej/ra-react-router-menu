@@ -10,7 +10,7 @@ import ForzaPage from "./routes/ForzaPage.tsx";
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/ra-react-router-menu/",
     element: <App />,
     children: [
       {

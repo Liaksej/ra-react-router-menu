@@ -1,21 +1,21 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, useMatch } from "react-router-dom";
 
 const menuItems = [
   {
     name: "Главная",
-    path: "/",
+    path: "/ra-react-router-menu/",
   },
   {
     name: "Дрифт-такси",
-    path: "/drift",
+    path: "/ra-react-router-menu/drift",
   },
   {
     name: "Time Attack",
-    path: "/timeattack",
+    path: "/ra-react-router-menu/timeattack",
   },
   {
     name: "Forza Karting",
-    path: "/forza",
+    path: "/ra-react-router-menu/forza",
   },
 ];
 
@@ -23,17 +23,18 @@ export default function Menu() {
   return (
     <div>
       <nav className="menu">
-        {menuItems.map((item) => (
-          <NavLink
-            key={item.name}
-            to={item.path}
-            className={({ isActive }) =>
-              isActive ? "menu__item-active menu__item" : "menu__item"
-            }
-          >
-            {item.name}
-          </NavLink>
-        ))}
+        {menuItems.map((item) => {
+          const match = useMatch(item.path);
+          return (
+            <NavLink
+              key={item.name}
+              to={item.path}
+              className={match ? "menu__item-active menu__item" : "menu__item"}
+            >
+              {item.name}
+            </NavLink>
+          );
+        })}
       </nav>
     </div>
   );
