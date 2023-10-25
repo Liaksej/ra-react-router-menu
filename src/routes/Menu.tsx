@@ -1,4 +1,4 @@
-import { NavLink, useMatch } from "react-router-dom";
+import MenuItem from "../components/MenuItem";
 
 const menuItems = [
   {
@@ -24,17 +24,9 @@ export default function Menu() {
     <div>
       <nav className="menu">
         {menuItems.map((item) => {
-          const match = useMatch(item.path);
-          return (
-            <NavLink
-              key={item.name}
-              to={item.path}
-              className={match ? "menu__item-active menu__item" : "menu__item"}
-            >
-              {item.name}
-            </NavLink>
-          );
+          return <MenuItem item={item} key={item.name} />;
         })}
+        ;
       </nav>
     </div>
   );
