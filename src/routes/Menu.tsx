@@ -3,19 +3,19 @@ import MenuItem from "../components/MenuItem";
 const menuItems = [
   {
     name: "Главная",
-    path: "/ra-react-router-menu/",
+    path: "/",
   },
   {
     name: "Дрифт-такси",
-    path: "/ra-react-router-menu/drift",
+    path: "/drift",
   },
   {
     name: "Time Attack",
-    path: "/ra-react-router-menu/timeattack",
+    path: "/timeattack",
   },
   {
     name: "Forza Karting",
-    path: "/ra-react-router-menu/forza",
+    path: "/forza",
   },
 ];
 
