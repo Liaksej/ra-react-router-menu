@@ -34,8 +34,7 @@ const router = createBrowserRouter(
     },
   ],
   {
-    basename:
-      process.env.NODE_ENV === "production" ? "/ra-react-router-menu/" : "/",
+    basename: "/ra-react-router-menu/",
   },
 );
 
